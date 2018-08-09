@@ -30,23 +30,16 @@ function losowanko ()
 	if (los3)
 	document.getElementById("b3").innerHTML = w2[Math.floor(getRandomArbitrary(0, w2.length))];
 	time += 1;
-	if(time == 21)
-	{
+	if(time == 80)
 		los1 = false;
-	}
-	if(time == 24)
-	{
+	if(time == 100)
 		los2 = false;
-	}
-	if(time == 27)
-	{
+	if(time == 120)
 		los3 = false;
-	}
-	if (lottSpeed < lottTime)
+	if (los3 == true)
 	{
-		document.getElementById("progress").innerHTML = "trwa losowanko (" + Math.floor((lottSpeed/lottTime)*100) + "%)";
+		document.getElementById("progress").innerHTML = "trwa losowanko (" + Math.floor((lottSpeed/lottTime)*100) + "%) " +time;
 		setTimeout(losowanko, lottSpeed);
-		lottSpeed += lottSpeed*0.1;
 	}else{
 		document.getElementById("progress").innerHTML = "losowanko zakonczone, jeszcze raz?";
 		document.getElementById("a3").play();
