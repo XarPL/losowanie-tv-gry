@@ -1,8 +1,8 @@
 ﻿function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
-var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych"];
-var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów"];
+var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących"];
+var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy"];
 
 var lottSpeed = 50;
 var lottTime = 600;
