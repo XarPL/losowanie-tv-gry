@@ -12,7 +12,9 @@
 
 html {
     color: #FFF;
-	background-color: rgb(168,0,0);
+	background: url(../img/bg.jpg) repeat no-repeat, url(../img/bg2.jpg) repeat;
+	background-size: 400px, contain;
+    	/*background-repeat-y: no-repeat, repeat;*/
     font-size: 1em;
     line-height: 1.4;
 	font-family: Arial, Helvetica, sans-serif;
@@ -100,11 +102,24 @@ textarea {
    ========================================================================== */
 
 .wrapper {
+	padding: 10px;
+	background-color: rgb(168,0,0);
 	width: 600px;
 	text-align: center;
 	margin: 0 auto;
 	border-spacing: 10px;
     border-collapse: separate;
+	margin-top: 15px;
+	box-shadow: 3px -4px 20px 3px black;
+}
+.wrapper2 {
+	padding: 10px;
+	width: 600px;
+	text-align: center;
+	margin: 0 auto;
+	border-spacing: 10px;
+    border-collapse: separate;
+	margin-top: 15px;
 }
 .header {
 	width: 150px;
@@ -121,7 +136,44 @@ textarea {
 	font-size: xx-large;
 	display: table-cell;
 	vertical-align: middle;
-	
+	box-shadow: 0px 0px 20px 0px black;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 #b1 {
 	width:100px;
@@ -137,20 +189,18 @@ textarea {
 	font-size: small;
 	font-style: italic; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-footer
+{
+	margin: 5px;
+}
+button{
+	background-color: black;
+	color: white;
+	font-size: xx-large;
+	border: dashed lime;
+	margin: 2% auto;
+	cursor: pointer;
+}
 
 /* ==========================================================================
    Helper classes
