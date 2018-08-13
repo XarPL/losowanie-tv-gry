@@ -32,9 +32,11 @@
   <p id="footer">to jest na zarty - inspirowane twórczością klocucha</p>
   </div>
   <div class="wrapper2">
-  <button type="button" onclick="screen()" class="btn-foo"><i class="fa fa-download"></i></button>
+  <button type="button" onclick="preview()" class="btn-foo"><i class="fas fa-search"></i></button>
+  <button type="button" onclick="download()" class="btn-foo"><i class="fa fa-download"></i></button>
   <a href="https://github.com/Xardas49/losowanie-tv-gry"><button type="button" onclick="" class="btn-foo"><i class="fab fa-github-alt"></i></button></a>
   <p id="keywords"></p>
+  <p id="stats"></p>
   </div>
   <audio id="a1">
   <source src="sounds/losowanko_start.mp3" type="audio/mpeg">
@@ -50,17 +52,23 @@
   </div>
   <audio id="a3">
   <source src="sounds/trudnetrudne.mp3" type="audio/mpeg">
-	</audio>
+  </audio>
+  <audio id="a4" loop>
+  <source src="sounds/tmsll.mp3" type="audio/mpeg">
+  </audio>
   </div>
   <div id="myModal" class="modal">
 	  <span class="close">&times;</span>
 	  <div class="modal-content" id="img01"></div>
-	  <div id="caption"></div>
+	  <div id="caption">Kliknij prawym przyciskiem myszy i wybierz jedną z opcji</div>
   </div>
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/vendor/html2canvas.min.js"></script>
+  <script src="js/vendor/Blob.js"></script>
+  <script src="js/vendor/FileSaver.js"></script>
+  
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 

@@ -120,6 +120,7 @@ textarea {
 	border-spacing: 10px;
     border-collapse: separate;
 	margin-top: 15px;
+	background-color: rgba(0,0,0,0.5);
 }
 .header {
 	width: 150px;
@@ -154,8 +155,7 @@ textarea {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 620px;
 }
 
 /* The Close Button */
@@ -189,9 +189,10 @@ textarea {
 	font-size: small;
 	font-style: italic; 
 }
-.btn-footer
+.btn-foo
 {
 	margin: 5px;
+	background-color: rgb(168,0,0);
 }
 button{
 	background-color: black;
@@ -201,7 +202,17 @@ button{
 	margin: 2% auto;
 	cursor: pointer;
 }
-
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
