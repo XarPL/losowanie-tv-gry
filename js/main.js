@@ -27,7 +27,7 @@ function download() {
     document.querySelector("#img01").innerHTML = "";
     html2canvas(document.querySelector("#machine")).then(canvas => {
         canvas.toBlob(function(blob) {
-            saveAs(blob, "losowanko.png");
+            saveAs(blob,"losowanko_"+losowania+".png");
         });
     });
 }
