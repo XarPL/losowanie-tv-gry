@@ -1,8 +1,8 @@
 ﻿function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
-var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących", "przykrych", "wojennych"];
-var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności"];
+var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących", "przykrych", "wojennych", "wiedźmińskich", "najnudniejszych"];
+var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności", "wideorecenzji", "map w butrefeld 1", "łysoli w grach", "gruboli w grach", "umiejętności w grach", "zakończeń w grach", "zakończeń w filmach", "gier strategicznych", "skradaninek", "strzelaninek", "A.I. w grach", "gier RPG", "otwartych światów w grach", "pokazówek w grach", "zagadek w grach", "easter eggów w grach", "sekretów w grach", "gier mobilnych", "sztuczki twórców gier", "potraw w grach", "filmów Uwe Bolla", "achievementów", "projektów non-profit", "silników gier"];
 var lottSpeed = 50;
 var lottTime = 600;
 var los1 = true;
@@ -94,7 +94,7 @@ function losowanko() {
 		else if (document.getElementById("b2").innerHTML == w1[25] && document.getElementById("b3").innerHTML == w2[35]) {
 			document.getElementById("a4").src = "sounds/roltest.mp3"
 			document.getElementById("a4").play();
-			document.getElementById("progress").innerHTML = "specjal napędził: oGon & testoviron <br />oryginał: <a href='https://www.youtube.com/watch?v=4kbpssHwqYc'>Link do YT [+18]</a><br />losowanko zakonczone, jeszcze raz?";
+			document.getElementById("progress").innerHTML = "specjal napędził: Klejnot Nilu & Testoviron <br />oryginał: <a href='https://www.youtube.com/watch?v=4kbpssHwqYc'>Link do YT [+18]</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
 		}
 		else if (document.getElementById("b1").innerHTML == 5 && document.getElementById("b2").innerHTML == w1[0] && document.getElementById("b3").innerHTML == w2[0]) {
