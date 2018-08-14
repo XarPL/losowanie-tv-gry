@@ -1,9 +1,8 @@
 ﻿function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
-var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących"];
-var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy"];
-
+var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących", "przykrych", "wojennych"];
+var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności"];
 var lottSpeed = 50;
 var lottTime = 600;
 var los1 = true;
@@ -85,11 +84,32 @@ function losowanko() {
         setTimeout(losowanko, lottSpeed);
     } else {
         document.getElementById("progress").innerHTML = "losowanko zakonczone, jeszcze raz?";
-        if (document.getElementById("b2").innerHTML == w1[7] && document.getElementById("b3").innerHTML == w2[21]) {
+        if (document.getElementById("b2").innerHTML == w1[7] && document.getElementById("b3").innerHTML == w2[21]){
+			document.getElementById("a4").src = "sounds/tmsll.mp3"
             document.getElementById("a4").play();
-            document.getElementById("progress").innerHTML = "oryginał: <a href='https://www.youtube.com/watch?v=yvGXCisAaR4'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+			
+            document.getElementById("progress").innerHTML = "specjal napędził: Todd Howard <br />oryginał: <a href='https://www.youtube.com/watch?v=yvGXCisAaR4'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
-        } else {
+        }
+		else if (document.getElementById("b2").innerHTML == w1[25] && document.getElementById("b3").innerHTML == w2[35]) {
+			document.getElementById("a4").src = "sounds/roltest.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: oGon & testoviron <br />oryginał: <a href='https://www.youtube.com/watch?v=4kbpssHwqYc'>Link do YT [+18]</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b1").innerHTML == 5 && document.getElementById("b2").innerHTML == w1[0] && document.getElementById("b3").innerHTML == w2[0]) {
+			document.getElementById("a4").src = "sounds/cytryny.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b2").innerHTML == w1[36]) {
+			document.getElementById("a4").src = "sounds/tonasiebie.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else {
             document.getElementById("a3").play();
         }
         document.getElementById("a2").pause();
