@@ -43,7 +43,11 @@
         <button type="button" onclick="preview()" class="btn-foo"><i class="fas fa-search"></i></button>
         <button type="button" onclick="download()" class="btn-foo"><i class="fa fa-download"></i></button>
         <a href="https://github.com/Xardas49/losowanie-tv-gry"><button type="button" onclick="" class="btn-foo"><i class="fab fa-github-alt"></i></button></a>
-        <p id="keywords"></p>
+        <div class="volbox">
+		  <i class="fas fa-volume-up"></i>
+		  <input id="volume" type="range" min="0" max="1" value="1" step="0.05" oninput="setVolume(this.value)" onchange="setVolume(this.value)">
+		  </div>
+		<p id="keywords"></p>
         <p id="stats"></p>
     </div>
     <audio id="a1">

@@ -13,6 +13,12 @@ var modal = document.getElementById('myModal');
 var modal_close = document.getElementsByClassName("close")[0];
 var losowania = 0;
 var specjalne = 0;
+var volume = 1;
+if (localStorage.volume) {
+	volume = Number(localStorage.volume);
+	document.getElementById("volume").value = volume;
+	setVolume(volume);
+}
 if (localStorage.losowania) {
     losowania = Number(localStorage.losowania);
     specjalne = Number(localStorage.specjalne);
@@ -20,7 +26,6 @@ if (localStorage.losowania) {
 document.getElementById("keywords").innerHTML = "baza danych maszyny zawiera " + (w1.length + w2.length) + " pozycji (" + (9 * w1.length * w2.length) + " kombinacji)";
 document.getElementById("stats").innerHTML = "twoje losowania: " + losowania + ", wylosowałeś/aś " + specjalne + " specjalnych tematów";
 var started = false;
-
 function download() {
 
     document.querySelector("#img01").innerHTML = "";
@@ -30,7 +35,14 @@ function download() {
         });
     });
 }
-
+function setVolume(value)
+{
+	document.getElementById("a1").volume = value;
+	document.getElementById("a2").volume = value;
+	document.getElementById("a3").volume = value;
+	document.getElementById("a4").volume = value;
+	localStorage.volume = value;
+}
 function preview() {
     modal.style.display = "block";
     var div = document.querySelector("#img01");
