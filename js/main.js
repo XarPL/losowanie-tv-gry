@@ -2,7 +2,7 @@
     return Math.random() * (max - min) + min;
 }
 var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących", "przykrych", "wojennych", "wiedźmińskich", "najnudniejszych"];
-var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności", "wideorecenzji", "map w butrefeld 1", "łysoli w grach", "gruboli w grach", "umiejętności w grach", "zakończeń w grach", "zakończeń w filmach", "gier strategicznych", "skradaninek", "strzelaninek", "A.I. w grach", "gier RPG", "otwartych światów w grach", "pokazówek w grach", "zagadek w grach", "easter eggów w grach", "sekretów w grach", "gier mobilnych", "sztuczki twórców gier", "potraw w grach", "filmów Uwe Bolla", "achievementów", "projektów non-profit", "silników gier"];
+var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności", "wideorecenzji", "map w butrefeld 1", "łysoli w grach", "gruboli w grach", "umiejętności w grach", "zakończeń w grach", "zakończeń w filmach", "gier strategicznych", "skradaninek", "strzelaninek", "A.I. w grach", "gier RPG", "otwartych światów w grach", "pokazówek w grach", "zagadek w grach", "easter eggów w grach", "sekretów w grach", "gier mobilnych", "sztuczki twórców gier", "potraw w grach", "filmów Uwe Bolla", "achievementów", "projektów non-profit", "silników gier", "przeciwników", "bohaterów w grach", "bohaterów w filmach", "koni w grach"];
 var lottSpeed = 50;
 var lottTime = 600;
 var los1 = true;
@@ -43,13 +43,20 @@ function setVolume(value)
 	document.getElementById("a4").volume = value;
 	localStorage.volume = value;
 }
-function preview() {
+function info() {
     modal.style.display = "block";
     var div = document.querySelector("#img01");
-    document.querySelector("#img01").innerHTML = "";
+    document.querySelector("#img01").innerHTML = "<div id='about'><h1>o maszynie</h1>legendarna maszyna losujaca teraz dostepna w przegladarce. wylosuj swoj temat, udostępnij go znajomych, redakcji TVGRY, wykorzystaj go jako temat na swoj filmik lub po prostu nic z nim nie rob (najlepiej).</div><h1>tworcy maszyny</h1><ul style='list-style-type:square'><li>ksar - projekt i wykonanie</li><li><a href='https://www.facebook.com/Andrewblage/?ref=bookmarks'>andrew blage</a> - pomysl, testy</li><li>oGon - specjalista ds. rozwoju oprogramowania, testy</li><li>ollea - specjalistka ds. rozrywki, testy z duzym napracowaniem</li><li>tomchuck - specjalista ds. zabezpieczen i naduzyc, testy</li><li>Szmyk - QA Engineer</li></ul><h1>podziekowania</h1><ul style='list-style-type:square'><li>Klocuch - inspiracja, dublaż</li><i>Glos klocucha zostal wykorzystany za jego zgoda</i><li>Redakcja TVGRY - inspiracja</li><li>Todd Howard - za wszystkie slodkie klamstwa</li><li>Zespół SoulFire - testy</li><i>lubisz grę Gothic? Sprawdź ich projekt! <a href='https://kronikimyrtany.pl/'>[LINK]</a>";
+	document.querySelector("#caption").innerHTML = "";
+}
+function preview() {
+	document.querySelector("#img01").innerHTML = "";
+    modal.style.display = "block";
+    var div = document.querySelector("#img01");
     html2canvas(document.querySelector("#machine")).then(canvas => {
         div.appendChild(canvas)
     });
+	document.querySelector("#caption").innerHTML = "Kliknij prawym przyciskiem myszy i wybierz jedną z opcji";
 }
 
 function start() {
@@ -78,9 +85,19 @@ function losowanko() {
 
     document.getElementById("a2").play();
     if (los1)
-        document.getElementById("b1").innerHTML = Math.floor(getRandomArbitrary(2, 10));
+        document.getElementById("b1").innerHTML = Math.floor(getRandomArbitrary(2, 11));
     if (los2)
-        document.getElementById("b2").innerHTML = w1[Math.floor(getRandomArbitrary(0, w1.length))];
+		if (document.getElementById("b1").innerHTML == 3 )
+		{
+			if (Math.floor(getRandomArbitrary(0,8)) == 1)
+			{
+				document.getElementById("b2").innerHTML = "wiedzmin 3";
+			}else{
+				document.getElementById("b2").innerHTML = w1[Math.floor(getRandomArbitrary(0, w1.length))];
+			}
+		}else{
+			document.getElementById("b2").innerHTML = w1[Math.floor(getRandomArbitrary(0, w1.length))];
+		}
     if (los3)
         document.getElementById("b3").innerHTML = w2[Math.floor(getRandomArbitrary(0, w2.length))];
 
@@ -117,6 +134,13 @@ function losowanko() {
 		}
 		else if (document.getElementById("b2").innerHTML == w1[36]) {
 			document.getElementById("a4").src = "sounds/tonasiebie.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b2").innerHTML == "wiedzmin 3") {
+			document.getElementById("b3").innerHTML = "najlepszy"
+			document.getElementById("a4").src = "sounds/3w3.mp3"
 			document.getElementById("a4").play();
 			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
