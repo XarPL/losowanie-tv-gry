@@ -1,8 +1,15 @@
 ﻿function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
-var w1 = ["najlepszych", "chinskich", "polskich", "niemieckich", "rosyjskich", "największych", "najmniejszych", "najsłodszych", "najgłupszych", "losowych", "skandalicznych", "nieprzewidywalnych", "przewidywalnych", "erotycznych", "najgorszych", "podrabianych", "najsłabszych", "najsilniejszych", "najpiękniejszych", "walecznych", "najkrótszych", "najdłuższych", "egzotycznych", "znamienitych", "najstarszych", "najdroższych", "najtańszych", "najdziwniejszych", "najśmieszniejszych", "najciekawszych", "wkurzających", "niemożliwych", "fascynujących", "mrocznych", "żenujących", "przykrych", "wojennych", "wiedźmińskich", "najnudniejszych", "warszawskich"];
-var w2 = ["cytryn w grach", "bajek", "modów", "gier", "filmów", "błędów", "momentów w grach", "reklam", "reklam delmy", "bossów", "owoców", "broni", "pomidorów", "rozłamów w ekipach", "mordobitek", "strzelanek", "misji hitmena", "aktorów", "twórców", "menju w grach", "kłamstw deweloperów", "kłamstw Todda Howarda", "modów do Skyrim", "modów do Gothic", "modów do Wiedźmin 3", "dublaży w grach", "dublaży w filmach", "pomówień", "muzyczek w grach", "muzyczek w filmach", "bananów", "pomarańczy", "postaci z Star Wars", "lokacji w grach", "gadżetów dla graczy", "rolexów", "społeczności", "wideorecenzji", "map w butrefeld 1", "łysoli w grach", "gruboli w grach", "umiejętności w grach", "zakończeń w grach", "zakończeń w filmach", "gier strategicznych", "skradaninek", "strzelaninek", "A.I. w grach", "gier RPG", "otwartych światów w grach", "pokazówek w grach", "zagadek w grach", "easter eggów w grach", "sekretów w grach", "gier mobilnych", "sztuczki twórców gier", "potraw w grach", "filmów Uwe Bolla", "achievementów", "projektów non-profit", "silników gier", "przeciwników", "bohaterów w grach", "bohaterów w filmach", "koni w grach", "ryjców w grach", "małp w grach", "bitek w grach", "tureckich oszustów", "cwaniaków w grach", "delfinad", "kabaretów", "sztuczek twórców gier", "buterfeldów", "faloutów", "misji w gta", "misji z autotanczeniem", "misji z tanczeniem", "programów w telewizorze", "babsztyli", "rzeczy", "lambad", "frakcji z gier", "nieliniowych questów", "ned for spidy", "pegazusy", "nosorożce", "mikropłatności", "złych z gier", "ciekawostek", "pogromców mitów", "numerów pani domu"];
+
+var w1 = [];
+var w2 = [];
+
+$.getJSON("database.json", function (json) {
+	 w1 = json.w1;
+	 w2 = json.w2;
+});
+
 var lottSpeed = 50;
 var lottTime = 600;
 var los1 = true;
