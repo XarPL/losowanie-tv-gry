@@ -5,6 +5,10 @@
 var w1 = [];
 var w2 = [];
 
+$.ajaxSetup({
+	async: false
+});
+	
 $.getJSON("database.json", function (json) {
 	 w1 = json.w1;
 	 w2 = json.w2;
