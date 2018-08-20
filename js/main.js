@@ -4,11 +4,10 @@
 
 var w1 = [];
 var w2 = [];
-
+var ryjce = ["szef","kacper","hed","arasz","jordan","fanggotten"];
 $.ajaxSetup({
 	async: false
 });
-	
 $.getJSON("database.json", function (json) {
 	 w1 = json.w1;
 	 w2 = json.w2;
@@ -57,7 +56,7 @@ function setVolume(value)
 function info() {
     modal.style.display = "block";
     var div = document.querySelector("#img01");
-    document.querySelector("#img01").innerHTML = "<div id='about'><h1>o maszynie</h1>legendarna maszyna losujaca teraz dostepna w przegladarce. wylosuj swoj temat, udostępnij go znajomym, redakcji TVGRY, wykorzystaj go jako temat na swoj filmik lub po prostu nic z nim nie rob (najlepiej).</div><h1>tworcy maszyny</h1><ul style='list-style-type:square'><li>ksar - projekt i wykonanie</li><li><a href='https://www.facebook.com/Andrewblage/?ref=bookmarks' target='_blank'>andrju blejdz</a> - pomysl, testy</li><li>ołgon - specjalista ds. rozwoju oprogramowania, testy</li><li>oleła - specjalistka ds. rozrywki, testy z duzym napracowaniem</li><li>tomczak - specjalista ds. zabezpieczen i naduzyc, testy</li><li><a href='https://szymonzak.ovh/' target='_blank'>szmyk</a> - qa engineer</li></ul><h1>podziekowania</h1><ul style='list-style-type:square'><li>Klocuch - inspiracja, dublaż</li><i>Glos klocucha zostal wykorzystany za jego zgoda</i><li>Redakcja TVGRY - inspiracja</li><li>Todd Howard - za wszystkie slodkie klamstwa</li><li>Zespół SoulFire - testy</li><i>lubisz grę Gothic? Sprawdź ich projekt! <a href='https://kronikimyrtany.pl/' target='_blank'>[LINK]</a>";
+    document.querySelector("#img01").innerHTML = "<div id='about'><h1>o maszynie</h1>legendarna maszyna losujaca teraz dostepna w przegladarce. wylosuj swoj temat, udostępnij go znajomym, redakcji TVGRY, wykorzystaj go jako temat na swoj filmik lub po prostu nic z nim nie rob (najlepiej). #gierki #tvgry #klocuch #losulosu #losowanko</div><h1>tworcy maszyny</h1><ul style='list-style-type:square'><li>ksar - projekt i wykonanie</li><li><a href='https://www.facebook.com/Andrewblage/?ref=bookmarks' target='_blank'>andrju blejdz</a> - pomysl, testy</li><li>ołgon - specjalista ds. rozwoju oprogramowania, testy</li><li>oleła - specjalistka ds. rozrywki, testy z duzym napracowaniem</li><li>tomczak - specjalista ds. zabezpieczen i naduzyc, testy</li><li><a href='https://szymonzak.ovh/' target='_blank'>szmyk</a> - qa engineer</li></ul><h1>podziekowania</h1><ul style='list-style-type:square'><li>Klocuch - inspiracja, dublaż</li><i>Glos klocucha zostal wykorzystany za jego zgoda</i><li>Redakcja TVGRY - inspiracja</li><li>Todd Howard - za wszystkie slodkie klamstwa</li><li>Zespół SoulFire - testy</li><i>lubisz grę Gothic? Sprawdź ich projekt! <a href='https://kronikimyrtany.pl/' target='_blank'>[LINK]</a></i></ul><h1>wsparcie</h2><ul>Kontakt / Dotacje Paypal: stormtrooper69pl@gmail.com<br /><span style='font-size:x-small;'>pieniądze z dotacji będą przeznaczone na utrzymanie strony oraz zakup pićka i gum do żucia (nie lambady)";
 	document.querySelector("#caption").innerHTML = "";
 }
 function preview() {
@@ -111,7 +110,7 @@ function losowanko() {
 		}
     if (los3)
         document.getElementById("b3").innerHTML = w2[Math.floor(getRandomArbitrary(0, w2.length))];
-
+	 document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/"+ryjce[Math.floor(getRandomArbitrary(0, ryjce.length))]+".png'/>";
     time += 1;
     if (time == 80)
         los1 = false;
@@ -144,7 +143,15 @@ function losowanko() {
             specjalne += 1;
 		}
 		else if (document.getElementById("b2").innerHTML == w1[36]) {
+			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/szef.png />";
 			document.getElementById("a4").src = "sounds/tonasiebie.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b2").innerHTML == w1[1]) {
+			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/jordan.png />";
+			document.getElementById("a4").src = "sounds/chinskie.mp3"
 			document.getElementById("a4").play();
 			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
@@ -154,6 +161,19 @@ function losowanko() {
 			document.getElementById("a4").src = "sounds/3w3.mp3"
 			document.getElementById("a4").play();
 			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b2").innerHTML == w1[40] && document.getElementById("b3").innerHTML == w2[68]) {
+			document.getElementById("a4").src = "sounds/to.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Husson Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=sS3xkUyqyUQ'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+		}
+		else if (document.getElementById("b2").innerHTML == w1[42] && document.getElementById("b3").innerHTML == w2[100]) {
+			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/kacper.png />";
+			document.getElementById("a4").src = "sounds/kruci.mp3"
+			document.getElementById("a4").play();
+			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=sS3xkUyqyUQ'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
 		}
 		else {
