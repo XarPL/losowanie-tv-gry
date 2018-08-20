@@ -143,14 +143,14 @@ function losowanko() {
             specjalne += 1;
 		}
 		else if (document.getElementById("b2").innerHTML == w1[36]) {
-			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/szef.png />";
+			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/szef.png' />";
 			document.getElementById("a4").src = "sounds/tonasiebie.mp3"
 			document.getElementById("a4").play();
 			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
 		}
 		else if (document.getElementById("b2").innerHTML == w1[1]) {
-			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/jordan.png />";
+			document.getElementById("ryjce").innerHTML = "temacik dla: <img height='100px' src='img/jordan.png' />";
 			document.getElementById("a4").src = "sounds/chinskie.mp3"
 			document.getElementById("a4").play();
 			document.getElementById("progress").innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
