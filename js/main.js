@@ -4,7 +4,7 @@
 
 var w1 = [];
 var w2 = [];
-var ryjce = ["szef", "kacper", "hed", "arasz", "jordan", "fanggotten"];
+var ryjce = ["szef", "kacper", "hed", "arasz", "jordan", "fanggotten", "michal"];
 $.ajaxSetup({
     async: false
 });
@@ -12,7 +12,6 @@ $.getJSON("database.json", function(json) {
     w1 = json.w1;
     w2 = json.w2;
 });
-
 var lottSpeed = 50;
 var lottTime = 600;
 var los1 = true;
@@ -114,7 +113,7 @@ function losowanko() {
         b1.innerHTML = Math.floor(getRandomArbitrary(2, 11));
     if (los2)
         if (b1.innerHTML == 3) {
-            if (Math.floor(getRandomArbitrary(0, 8)) == 1) {
+            if (Math.floor(getRandomArbitrary(0, 10)) == 1) {
                 b2.innerHTML = "wiedzmin 3";
             }
             else {
@@ -140,6 +139,7 @@ function losowanko() {
     }
     else {
         progress.innerHTML = "losowanko zakonczone, jeszcze raz?";
+		b3.innerHTML = w2[92]
         if (b2.innerHTML == w1[7] && b3.innerHTML == w2[21]) {
             a4.src = "sounds/tmsll.mp3"
             a4.play();
@@ -191,6 +191,30 @@ function losowanko() {
             a4.src = "sounds/kruci.mp3"
             a4.play();
             progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=sS3xkUyqyUQ'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+        }
+		else if (b2.innerHTML == w1[59] && b3.innerHTML == w2[104]) {
+            a4.src = "sounds/jg.mp3"
+            a4.play();
+            progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=lwJMwKgejng'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+        }
+		else if (b2.innerHTML == w1[58] && b3.innerHTML == w2[105]) {
+            a4.src = "sounds/natsp.mp3"
+            a4.play();
+            progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=lwJMwKgejng'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+        }
+		else if (b3.innerHTML == w2[112]) {
+            a4.src = "sounds/cwiercz.mp3"
+            a4.play();
+            progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=rxlqV0f4us0'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            specjalne += 1;
+        }
+		else if (b3.innerHTML == w2[92]) {
+            a4.src = "sounds/gin.mp3"
+            a4.play();
+            progress.innerHTML = "specjal napędził: Kistru ft Kaktus & Gothic <br />oryginał: <a href='https://www.youtube.com/watch?v=rxlqV0f4us0'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
         }
         else {
