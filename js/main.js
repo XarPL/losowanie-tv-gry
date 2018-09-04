@@ -139,7 +139,6 @@ function losowanko() {
     }
     else {
         progress.innerHTML = "losowanko zakonczone, jeszcze raz?";
-		b3.innerHTML = w2[92]
         if (b2.innerHTML == w1[7] && b3.innerHTML == w2[21]) {
             a4.src = "sounds/tmsll.mp3"
             a4.play();
