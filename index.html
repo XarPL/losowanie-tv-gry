@@ -2,7 +2,6 @@
 <html class="no-js" lang="">
 
 <head>
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123909953-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -33,20 +32,28 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-    <!-- Add your site or application content here -->
     <div class="wrapper" id="machine">
+		<div id="screen">
         <p class="header">losowanie</p>
         <div id="b1" class="box"></div>
         <div id="b2" class="box"></div>
         <div id="b3" class="box"></div>
-		<p id="ryjce">temacik dla: <img height='100px' src='img/kto.png' /></p>
+		<p id="ryjce">temacik dla: <img height='100px' src='img/kto.png' class='shadowed'/></p>
+		</div>
         <button type="button" onclick="start()">losuj</button>
+		<div>
+			<div class="progressbar" id="myProgress1">
+			  <div id="p1"></div>
+			</div>
+			<div class="progressbar" id="myProgress2">
+			  <div id="p2"></div>
+			</div>
+			<div class="progressbar" id="myProgress3">
+			  <div id="p3"></div>
+			</div>
+		</div>
         <p id="progress">czekanko - kliknij 'losuj'</p>
-
+		
         <p id="footer">to jest na zarty - inspirowane twórczością klocucha</p>
     </div>
     <div class="wrapper2">
@@ -109,7 +116,17 @@
     </script>
     <script src="js/main.js">
     </script>
-	
 </body>
-
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+		<filter id="drop-shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+			<feOffset dx="1" dy="1" result="offsetblur"/>
+			<feFlood flood-color="rgba(0,0,0,0.5)"/>
+			<feComposite in2="offsetblur" operator="in"/>
+			<feMerge>
+				<feMergeNode/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+	</svg>
 </html>

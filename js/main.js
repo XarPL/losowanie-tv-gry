@@ -31,6 +31,9 @@ var a4 = document.getElementById("a4");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
+var p1 = document.getElementById("p1");
+var p2 = document.getElementById("p2");
+var p3 = document.getElementById("p3");
 var ryjceDiv = document.getElementById("ryjce");
 var progress = document.getElementById("progress");
 var stats = document.getElementById("stats");
@@ -78,7 +81,7 @@ function preview() {
     document.getElementById("img01").innerHTML = "";
     modal.style.display = "block";
     var div = document.getElementById("img01");
-    html2canvas(document.getElementById("machine")).then(canvas => {
+    html2canvas(document.getElementById("screen")).then(canvas => {
         div.appendChild(canvas)
     });
     document.getElementById("caption").innerHTML = "Kliknij prawym przyciskiem myszy i wybierz jedną z opcji";
@@ -101,8 +104,10 @@ function start() {
         los2 = true;
         los3 = true;
         time = 0;
+		p1.style.width = "0%";
+		p2.style.width = "0%";
+		p3.style.width = "0%";
         setTimeout(losowanko, 3300);
-
     };
 }
 
@@ -110,8 +115,12 @@ function losowanko() {
     a2.play();
 
     if (los1)
+	{
         b1.innerHTML = Math.floor(getRandomArbitrary(2, 11));
+		p1.style.width = (time/80)*100 + "%";
+	}
     if (los2)
+	{
         if (b1.innerHTML == 3) {
             if (Math.floor(getRandomArbitrary(0, 10)) == 1) {
                 b2.innerHTML = "wiedzmin 3";
@@ -123,16 +132,30 @@ function losowanko() {
         else {
             b2.innerHTML = w1[Math.floor(getRandomArbitrary(0, w1.length))];
         }
+		p2.style.width = ((time-80)/20)*100 + "%";
+	}
     if (los3)
+	{
         b3.innerHTML = w2[Math.floor(getRandomArbitrary(0, w2.length))];
-    ryjceDiv.innerHTML = "temacik dla: <img height='100px' src='img/" + ryjce[Math.floor(getRandomArbitrary(0, ryjce.length))] + ".png'/>";
+		p3.style.width = ((time-100)/20)*100 + "%";
+	}
+    ryjceDiv.innerHTML = "temacik dla: <img height='100px' class='shadowed' src='img/" + ryjce[Math.floor(getRandomArbitrary(0, ryjce.length))] + ".png'/>";
     time += 1;
     if (time == 80)
+	{
+		p1.style.width = "100%";
         los1 = false;
+	}
     if (time == 100)
+	{
+		p2.style.width = "100%";
         los2 = false;
+	}
     if (time == 120)
+	{
+		p3.style.width = "100%";
         los3 = false;
+	}
     if (los3 == true) {
         progress.innerHTML = "trwa losowanko (" + Math.floor((time / 120) * 100) + "%)";
         setTimeout(losowanko, lottSpeed);
@@ -159,14 +182,14 @@ function losowanko() {
             specjalne += 1;
         }
         else if (b2.innerHTML == w1[36]) {
-            ryjceDiv.innerHTML = "temacik dla: <img height='100px' src='img/szef.png' />";
+            ryjceDiv.innerHTML = "temacik dla: <img height='100px' class='shadowed' src='img/szef.png' />";
             a4.src = "sounds/tonasiebie.mp3"
             a4.play();
             progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
         }
         else if (b2.innerHTML == w1[1]) {
-            ryjceDiv.innerHTML = "temacik dla: <img height='100px' src='img/jordan.png' />";
+            ryjceDiv.innerHTML = "temacik dla: <img height='100px' class='shadowed' src='img/jordan.png' />";
             a4.src = "sounds/chinskie.mp3"
             a4.play();
             progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=H6qsJcALHkM'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
@@ -186,7 +209,7 @@ function losowanko() {
             specjalne += 1;
         }
         else if (b2.innerHTML == w1[42] && b3.innerHTML == w2[100]) {
-            ryjceDiv.innerHTML = "temacik dla: <img height='100px' src='img/kacper.png />";
+            ryjceDiv.innerHTML = "temacik dla: <img height='100px' class='shadowed' src='img/kacper.png />";
             a4.src = "sounds/kruci.mp3"
             a4.play();
             progress.innerHTML = "specjal napędził: Klo Cuch <br />oryginał: <a href='https://www.youtube.com/watch?v=sS3xkUyqyUQ'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
@@ -213,7 +236,7 @@ function losowanko() {
 		else if (b3.innerHTML == w2[92]) {
             a4.src = "sounds/gin.mp3"
             a4.play();
-            progress.innerHTML = "specjal napędził: Kistru ft Kaktus & Gothic <br />oryginał: <a href='https://www.youtube.com/watch?v=rxlqV0f4us0'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
+            progress.innerHTML = "specjal napędził: Kistru ft Kaktus & Gothic <br />oryginał: <a href='https://www.youtube.com/watch?v=y_ifjEYEMuY'>Link do YT</a><br />losowanko zakonczone, jeszcze raz?";
             specjalne += 1;
         }
         else {

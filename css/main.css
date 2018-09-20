@@ -112,6 +112,11 @@ textarea {
 	margin-top: 15px;
 	box-shadow: 3px -4px 20px 3px black;
 }
+#screen
+{
+	background-color: rgb(168,0,0);
+	/* html2canvas compat */
+}
 .wrapper2 {
 	padding: 10px;
 	width: 600px;
@@ -200,6 +205,53 @@ button{
 	border: dashed lime;
 	margin: 2% auto;
 	cursor: pointer;
+}
+.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.progressbar
+{
+	display: inline-block;
+	box-shadow: 0px 0px 20px 0px black;
+}
+#myProgress1 {
+    width: 300px;
+    background-color: black;
+}
+#myProgress2 {
+    width: 100px;
+    background-color: black;
+}
+#myProgress3 {
+    width: 100px;
+    background-color: black;
+}
+#myProgress4 {
+    width: 100px;
+    background-color: black;
+}
+#p1 {
+    width: 0%;
+    height: 30px;
+    background-color: lime;
+}
+#p2 {
+    width: 0%;
+    height: 30px;
+    background-color: lime;
+}
+#p3 {
+    width: 0%;
+    height: 30px;
+    background-color: lime;
+}
+#p4 {
+    width: 0%;
+    height: 30px;
+    background-color: lime;
 }
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
