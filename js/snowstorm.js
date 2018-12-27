@@ -16,10 +16,9 @@ var snowStorm = (function(window, document) {
   // --- common properties ---
 
   this.autoStart = true;          // Whether the snow should start automatically or not.
-  this.excludeMobile = false;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) Enable at your own risk.
-  this.flakesMax = 128;           // Limit total amount of snow made (falling + sticking)
+  this.flakesMax = 64;           // Limit total amount of snow made (falling + sticking)
   this.flakesMaxActive = 64;      // Limit amount of snow falling at once (less = lower CPU use)
-  this.animationInterval = 50;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
+  this.animationInterval = 60;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
   this.useGPU = true;             // Enable transform-based hardware acceleration, reduce CPU load.
   this.className = null;          // CSS class name for further customization on snow elements
   this.excludeMobile = true;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
