@@ -12,8 +12,8 @@
 
 html {
     color: #FFF;
-	background: url(../img/bg.jpg) repeat no-repeat, url(../img/bg2.jpg) repeat;
-	background-size: 400px, contain;
+	background-color: #a80000;
+	
     	/*background-repeat-y: no-repeat, repeat;*/
     font-size: 1em;
     line-height: 1.4;
@@ -103,34 +103,20 @@ textarea {
 
 .wrapper {
 	padding: 10px;
-	background-color: rgb(168,0,0);
-	width: 600px;
 	text-align: center;
 	margin: 0 auto;
 	border-spacing: 10px;
     border-collapse: separate;
 	margin-top: 15px;
-	box-shadow: 3px -4px 20px 3px black;
+	border: dashed lime;
 }
 #screen
 {
 	background-color: rgb(168,0,0);
 	/* html2canvas compat */
 }
-.wrapper2 {
-	padding: 10px;
-	width: 600px;
-	text-align: center;
-	margin: 0 auto;
-	border-spacing: 10px;
-    border-collapse: separate;
-	margin-top: 15px;
-	background-color: rgba(0,0,0,0.5);
-}
 .header {
-	width: 150px;
 	font-size: xx-large;
-	border: dashed lime;
 	margin: 2% auto;
 }
 .box {
@@ -180,14 +166,14 @@ textarea {
     cursor: pointer;
 }
 #b1 {
-	width:100px;
+	width:30%;
 	font-size: 80px;
 }
 #b2{
-	width:250px;
+	width:35%;
 }
 #b3{
-	width:250px;
+	width:35%;
 }
 #footer{
 	font-size: small;
@@ -215,11 +201,13 @@ button{
 .progressbar
 {
 	display: inline-block;
-	box-shadow: 0px 0px 20px 0px black;
 }
 .progressbar-content
 {
-	box-shadow: 0px 0px 20px 0px lime;
+	
+}
+#footer{
+	text-align: center;
 }
 #myProgress1 {
     width: 300px;

@@ -37,7 +37,6 @@ var p3 = document.getElementById("p3");
 var ryjceDiv = document.getElementById("ryjce");
 var progress = document.getElementById("progress");
 var stats = document.getElementById("stats");
-var keywords = document.getElementById("keywords");
 
 if (localStorage.volume) {
     volume = Number(localStorage.volume);
@@ -48,7 +47,6 @@ if (localStorage.losowania) {
     losowania = Number(localStorage.losowania);
     specjalne = Number(localStorage.specjalne);
 }
-keywords.innerHTML = "baza danych maszyny zawiera " + (w1.length + w2.length) + " pozycji (" + (9 * w1.length * w2.length) + " kombinacji)";
 stats.innerHTML = "twoje losowania: " + losowania + ", wylosowałeś/aś " + specjalne + " specjalnych tematów";
 var started = false;
 
@@ -86,8 +84,7 @@ function preview() {
     });
     document.getElementById("caption").innerHTML = "Kliknij prawym przyciskiem myszy i wybierz jedną z opcji";
 }
-
-function start() {
+function losu_start() {
     if (started == false) {
         started = true;
         a3.pause();
