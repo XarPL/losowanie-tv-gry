@@ -119,14 +119,18 @@ textarea {
 	font-size: xx-large;
 	margin: 2% auto;
 }
+@media screen and (max-height: 992px) and (max-width: 600px) {
+    .box {
+        min-height: 100px !important;
+    }
+}  
 .box {
-    height: 250px;
+    min-height: 250px;
     background: linear-gradient(white, #777777, white);
     border-radius: 20px;
 	display: inline-flex;
 	color: rgb(0, 0, 152);
 	font-size: xx-large;
-	display: table-cell;
 	vertical-align: middle;
 	box-shadow: 0px 0px 20px 0px black;
 }
@@ -166,14 +170,14 @@ textarea {
     cursor: pointer;
 }
 #b1 {
-	width:30%;
+	margin: auto;
 	font-size: 80px;
 }
 #b2{
-	width:35%;
+	margin: auto;
 }
 #b3{
-	width:35%;
+	margin: auto;
 }
 #footer{
 	font-size: small;
@@ -210,19 +214,15 @@ button{
 	text-align: center;
 }
 #myProgress1 {
-    width: 300px;
     background-color: black;
 }
 #myProgress2 {
-    width: 100px;
     background-color: black;
 }
 #myProgress3 {
-    width: 100px;
     background-color: black;
 }
 #myProgress4 {
-    width: 100px;
     background-color: black;
 }
 #p1 {

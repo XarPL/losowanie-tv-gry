@@ -41,25 +41,24 @@
 			<div class="wrapper" id="machine">
 			<div id="screen">
 			<p class="header">losowanie</p>
-			<table style="width:100%; border-spacing:10px; border-collapse: separate;">
-			  <tr>
-				<th id="b1" class="box"></th>
-				<th id="b2" class="box"></th>
-				<th id="b3" class="box"></th>
-			  </tr>
-			</table>
-			
+			<div class="row">
+			<div class="one-third column box"><div id="b1"></div></div>
+			<div class="one-third column box"><div id="b2"></div></div>
+			<div class="one-third column box"><div id="b3"></div></div>
+			<div class="row">
 			<p id="ryjce">temacik dla: <img height='100px' src='img/kto.png' class='shadowed'/></p>
 			</div>
+			<div class="row">
 			<button type="button" onclick="losu_start()">losuj</button>
-			<div>
-				<div class="progressbar" id="myProgress1">
+				</div>
+				<div class="row">
+				<div class="progressbar six columns" id="myProgress1">
 				  <div class="progressbar-content" id="p1"></div>
 				</div>
-				<div class="progressbar" id="myProgress2">
+				<div class="progressbar three columns" id="myProgress2">
 				  <div class="progressbar-content" id="p2"></div>
 				</div>
-				<div class="progressbar" id="myProgress3">
+				<div class="progressbar three columns" id="myProgress3">
 				  <div class="progressbar-content" id="p3"></div>
 				</div>
 			</div>
@@ -77,6 +76,7 @@
 				<input id="volume" type="range" min="0" max="1" value="1" step="0.05" oninput="setVolume(this.value)" onchange="setVolume(this.value)">
 			</div>
 			<p id="footer">to jest na zarty - inspirowane twórczością klocucha</p>
+			</div>
 			</div>
 		</div>
 		<div class="row">
